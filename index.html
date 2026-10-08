@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ShopEase - Modern E-Commerce Store</title>
+
+https://fonts.googleapis.com
+https://fonts.gstatic.com
+https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f7f8fc;
+    color:#222;
+}
+
+.container{
+    width:min(1200px,90%);
+    margin:auto;
+}
+
+header{
+    background:#ffffff;
+    position:sticky;
+    top:0;
+    z-index:100;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:700;
+    color:#2563eb;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+.cart-btn{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.hero{
+    min-height:80vh;
+    display:flex;
+    align-items:center;
+    background:linear-gradient(135deg,#dbeafe,#eff6ff);
+}
+
+.hero-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.hero-text h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+    line-height:1.1;
+}
+
+.hero-text p{
+    color:#555;
+    margin-bottom:25px;
+    font-size:1.05rem;
+}
+
+.btn{
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.section-title{
+    text-align:center;
+    margin:70px 0 30px;
+    font-size:2rem;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    margin-bottom:70px;
+}
+
+.card{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#2563eb;
+    font-size:1.2rem;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.add-btn{
+    width:100%;
+    border:none;
+    background:#111827;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.features{
+    background:white;
+    padding:60px 0;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature{
+    text-align:center;
+    padding:30px;
+    border-radius:15px;
+    background:#f8fafc;
+}
+
+.feature h3{
+    margin-bottom:10px;
+}
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+}
+
+@media(max-width:768px){
+    .hero-content{
+        grid-template-columns:1fr;
+    }
+
+    .hero-text h1{
+        font-size:2.5rem;
+    }
+
+    .nav-links{
+        display:none;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="container navbar">
+        <div class="logo">ShopEase</div>
+
+        <ul class="nav-links">
+            <li>#Home</a></li>
+            <li>#Shop</a></li>
+            <li>#Categories</a></li>
+            <li>#Contact</a></li>
+        </ul>
+
+        <button class="cart-btn">🛒 Cart</button>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h1>Discover Premium Products</h1>
+            <p>
+                Shop the latest trends with unbeatable prices and
+                fast delivery. Modern products for modern lifestyles.
+            </p>
+            #productsShop Now</a>
+        </div>
+
+        <div class="hero-image">
+            https://picsum.photos/800/600?random=1
+        </div>
+    </div>
+</section>
+
+<section id="products" class="container">
+    <h2 class="section-title">Featured Products</h2>
+
+    <div class="products">
+
+        <div class="card">
+            https://picsum.photos/500/500?random=11
+            <div class="card-content">
+                <h3>Premium Headphones</h3>
+                <div class="price">$129</div>
+                <button class="add-btn">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            https://picsum.photos/500/500?random=12
+            <div class="card-content">
+                <h3>Smart Watch</h3>
+                <div class="price">$199</div>
+                <button class="add-btn">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            https://picsum.photos/500/500?random=13
+            <div class="card-content">
+                <h3>Wireless Speaker</h3>
+                <div class="price">$89</div>
+                <button class="add-btn">Add To Cart</button>
+            </div>
+        </div>
+
+        <div class="card">
+            https://picsum.photos/500/500?random=14
+            <div class="card-content">
+                <h3>Modern Backpack</h3>
+                <div class="price">$59</div>
+                <button class="add-btn">Add To Cart</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Why Choose Us</h2>
+
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>🚚 Fast Delivery</h3>
+                <p>Quick and reliable shipping nationwide.</p>
+            </div>
+
+            <div class="feature">
+                <h3>💳 Secure Payments</h3>
+                <p>100% secure checkout experience.</p>
+            </div>
+
+            <div class="feature">
+                <h3>⭐ Premium Quality</h3>
+                <p>Only high-quality products from trusted brands.</p>
+            </div>
+
+            <div class="feature">
+                <h3>🔄 Easy Returns</h3>
+                <p>Hassle-free returns and customer support.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 ShopEase. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
