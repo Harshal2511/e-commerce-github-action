@@ -16,7 +16,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: Build docker image
-       uses: docker/setup-buildx-actions@v3
+       uses: docker/setup-buildx-actions@v7
   test:
    needs: build
    runs-on: ubuntu-latest
