@@ -1,32 +1,31 @@
-# Goal: to create CICD pipeline (dummy)
-
-name: CICD pipeline Demo
+# Goal: to create CICD pipeline (Dummy)
+name: Create CICD_Pipeline
 
 on: 
- push:
+ push: 
 
 jobs:
-  code:
-   runs-on: ubuntu-latest
-   steps:
-     - name: Clone the code
-       run: echo "Cloned the code"
-  build:
-   needs: code
-   runs-on: ubuntu-latest
-   steps:
-     - name: Build docker image
-       run: echo "completed docker image"
-  test:
-   needs: build
-   runs-on: ubuntu-latest
-   steps:
-     - name: Test the application
-       run: echo "tested the application"
-  deploy:
-   needs: [code,build,test]
-   runs-on: ubuntu-latest
-   steps:
-     - name: deploy the application
-       run: echo "Deployed the application"
-
+ code:
+  runs-on: ubuntu-latest
+  steps:
+    - name: clone the code
+      run: Cloning of code is successfully completed
+   
+ Build:
+  needs: code
+  runs-on: ubuntu-latest
+  steps:
+    - name: Build a Docker image
+      run: Docker image is successfully created.
+ Test:
+  needs: Build
+  runs-on: ubuntu-latest
+  steps:
+    - name: Test the code
+      run: Testing of code is completed
+ Deploy:
+  needs: [code,Build,Test]
+  runs-on: ubuntu-latest
+  steps:
+    - name: Deploy the code
+      run: Deployment has completed
